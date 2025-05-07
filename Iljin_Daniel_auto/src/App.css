@@ -1,0 +1,84 @@
+/* Yleiset asetukset */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1, h2 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Korttien asettelu */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Yksi sarake oletuksena */
+  gap: 16px; /* Korttien väli */
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Kaksi saraketta suuremmilla näytöillä */
+  }
+}
+
+/* Korttityylit */
+.auto-kortti {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auto-kortti:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.auto-kortti h3 {
+  font-size: 1.25rem;
+  color: #1a202c;
+}
+
+.auto-kortti p {
+  font-size: 0.875rem;
+  color: #4a5568;
+  margin-bottom: 8px;
+}
+
+.auto-kortti button {
+  font-size: 0.875rem;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.auto-kortti button:hover {
+  opacity: 0.9;
+}
+
+/* Painikkeet */
+button.bg-blue-500 {
+  background-color: #4299e1;
+  color: #ffffff;
+}
+
+button.bg-blue-500:hover {
+  background-color: #3182ce;
+}
+
+button.bg-red-500 {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+button.bg-red-500:hover {
+  background-color: #e53e3e;
+}

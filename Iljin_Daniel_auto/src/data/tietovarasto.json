@@ -1,0 +1,16 @@
+[
+  {
+    "numero": 1,
+    "merkki": "Toyota",
+    "malli": "Corolla",
+    "hinta": 20000,
+    "features": ["ilmastointi", "Bluetooth"]
+  },
+  {
+    "numero": 2,
+    "merkki": "Mercedes-Benz",
+    "malli": "A-Class",
+    "hinta": 22000,
+    "features": ["vakionopeudensäädin", "takakamera", "katonpoisto"]
+  }
+]
