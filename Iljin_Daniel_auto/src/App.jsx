@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import AutoLista from "./AutoLista";
 import Ostoskori from "./Ostoskori";
 
@@ -33,14 +34,25 @@ export default function Sovellus() {
   }, []);
 
   return (
-    <div className="bg-gray-50 min-h-screen">
-      <div className="container">
-        <h1 className="main-title">Autokauppa</h1>
-        <div className="grid">
-          <AutoLista autot={autot} lisaaOstoskoriin={lisaaOstoskoriin} poistaOstoskorista={poistaOstoskorista} />
-          <Ostoskori ostoskori={ostoskori} poistaOstoskorista={poistaOstoskorista} />
+    <Router>
+      <div className="bg-gray-50 min-h-screen">
+        <nav className="nav-bar">
+          <Link to="/" className="nav-link">Etusivu</Link>
+          <Link to="/ostoskori" className="nav-link">Ostoskori</Link>
+        </nav>
+        <div className="p-4 max-w-7xl mx-auto">
+          <Routes>
+            <Route
+              path="/"
+              element={<AutoLista autot={autot} lisaaOstoskoriin={lisaaOstoskoriin} poistaOstoskorista={poistaOstoskorista} />}
+            />
+            <Route
+              path="/ostoskori"
+              element={<Ostoskori ostoskori={ostoskori} poistaOstoskorista={poistaOstoskorista} />}
+            />
+          </Routes>
         </div>
       </div>
-    </div>
+    </Router>
   );
 }

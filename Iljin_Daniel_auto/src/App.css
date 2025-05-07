@@ -1,4 +1,23 @@
-/* Yleiset asetukset */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  background-color: #1a202c;
+  padding: 1rem;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.25rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #4299e1;
+}
+
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f9fafb;
@@ -12,21 +31,6 @@ h1, h2 {
   margin: 0;
   padding: 0;
 }
-
-/* Korttien asettelu */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr); /* Yksi sarake oletuksena */
-  gap: 16px; /* Korttien väli */
-}
-
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr); /* Kaksi saraketta suuremmilla näytöillä */
-  }
-}
-
-/* Korttityylit */
 .auto-kortti {
   background-color: #ffffff;
   border-radius: 8px;
@@ -75,10 +79,22 @@ button.bg-blue-500:hover {
 }
 
 button.bg-red-500 {
-  background-color: #ff0000;
+  background-color: #f56565;
   color: #ffffff;
 }
 
 button.bg-red-500:hover {
   background-color: #e53e3e;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

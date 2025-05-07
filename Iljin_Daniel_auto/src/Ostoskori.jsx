@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Ostoskori({ ostoskori }) {
+export default function Ostoskori({ ostoskori, poistaOstoskorista }) {
   const yhteishinta = ostoskori.reduce((summa, auto) => summa + auto.hinta, 0);
   const ryhmitelty = ostoskori.reduce((ryhmat, auto) => {
     const avain = `${auto.merkki} ${auto.malli}`;
